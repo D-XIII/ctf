@@ -23,6 +23,11 @@ RUN mkdir /home/squewe/.ssh
 RUN chmod 700 /home/squewe/.ssh
 RUN chown -R squewe:squewe /home/squewe/.ssh
 
+#moving flag to squewe's directory
+# RUN mv /app/flag.txt /home/squewe/
+COPY app/flag.txt /home/squewe/
+
+
 # Uncomment the PermitPasswordAuthentication option in the ssh config file
 RUN sed -i 's/#PermitPasswordAuthentication yes/PermitPasswordAuthentication yes/g' /etc/ssh/sshd_config
 
