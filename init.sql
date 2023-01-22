@@ -1,18 +1,19 @@
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE IF NOT EXISTS users (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
+    question VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    status VARCHAR(255) NOT NULL
+    status VARCHAR(255) NOT NULL,
+    role VARCHAR(255) NOT NULL
+
 );
 
-INSERT INTO users (username,password,status) VALUES ('admin', 'tshirt123', 'active');
+INSERT INTO users (username,question,password,status,role) VALUES ('admin','what do I never wear', 'tshirt123', 'active','admin');
 DROP TABLE IF EXISTS vod;
 CREATE TABLE IF NOT EXISTS vod (
-    "id" TEXT,
+    "id" TEXT PRIMARY KEY,
     "title" TEXT,
     "description" TEXT,
     "thumbnail" TEXT,
