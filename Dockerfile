@@ -7,18 +7,18 @@ RUN npm install
 COPY . .
 
 # Install OpenSSH
-RUN apk update && apk add openssh
+RUN apk add --no-cache openssh
+RUN apk add sudo
 
 # Add a new user and set a password
-RUN adduser -D admin && \
-    echo "admin:tshirt123" | chpasswd
+RUN adduser -D admin
 
-# Allow the new user to access the container via SSH
-RUN echo 'admin ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN echo "admin:tshirt123" | chpasswd
 
-EXPOSE 22 3000
+RUN /usr/sbin/sshd -D &
 
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 22 3000

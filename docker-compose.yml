@@ -3,16 +3,16 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     volumes:
       - ./app:/app
     ports:
       - 3000:3000
+      - 22:22
     environment:
       - NODE_ENV=development
     networks:
       - app-network
-
 
   db:
     image: postgres:12-alpine
@@ -32,7 +32,7 @@ services:
 
 networks:
   app-network:
-    network_mode: host
+    driver: bridge
 
 volumes:
   db-data:
