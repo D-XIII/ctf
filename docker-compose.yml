@@ -16,8 +16,8 @@ services:
   db:
     image: postgres:12-alpine
     volumes:
-      - db-data:/var/lib/postgresql/data
-      - ./db-scripts:/docker-entrypoint-initdb.d/
+      - ./db-data:/var/lib/postgresql/data
+      - ./db-scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
 
     environment:
       - POSTGRES_USER=postgres
@@ -25,7 +25,7 @@ services:
       - POSTGRES_DB=postgres
     ports:
       - 5432:5432
-    command: sh -c "psql -f /docker-entrypoint-initdb.d/init.sql"
+    # command: sh -c "psql -f /docker-entrypoint-initdb.d/init.sql"
     networks:
       - app-network
 
