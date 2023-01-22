@@ -2,10 +2,10 @@ module.exports = {
   extends: [
     'mantine',
     'plugin:@next/next/recommended',
-    'plugin:jest/recommended',
-    'plugin:storybook/recommended',
+    // 'plugin:jest/recommended',
+    // 'plugin:storybook/recommended',
   ],
-  plugins: ['testing-library', 'jest'],
+  plugins: ['testing-library', 'jest' /*, 'typeorm'*/],
   overrides: [
     {
       files: ['**/?(*.)+(spec|test).[jt]s?(x)'],
@@ -17,5 +17,6 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    // 'typeorm/rule-name': 2,
   },
 };

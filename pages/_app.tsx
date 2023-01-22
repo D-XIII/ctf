@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { useState } from 'react';
 import NextApp, { AppProps, AppContext } from 'next/app';
 import { getCookie, setCookie } from 'cookies-next';
