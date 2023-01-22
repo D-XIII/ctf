@@ -1,9 +1,9 @@
 const ormconfig = {
   type: 'postgres',
-  host: 'localhost',
+  host: 'db',
   port: 5432,
   username: 'postgres',
-  password: 'mypassword',
+  password: 'VerySecuredPasswordYouWillNeverHack',
   database: 'postgres',
   logging: false,
 };
