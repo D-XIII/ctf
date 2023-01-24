@@ -39,7 +39,7 @@ const Cards = ({ videos }: cardProps) => {
       wrap="wrap"
     >
       {' '}
-      {vods.map((vod: YoutubeCardProps) => (
+      {vods?.map((vod: YoutubeCardProps) => (
         <YoutubeCard {...vod} />
       ))}
     </Flex>

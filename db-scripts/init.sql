@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 );
 
-INSERT INTO users (username,question,password,status,role) VALUES ('admin','what do I never wear', 'tshirt123', 'active','admin');
+INSERT INTO users (username,question,password,status,role) VALUES ('squewe','apache helicopter', 'azertyuiop123123123qwerty', 'active','admin');
 DROP TABLE IF EXISTS vod;
 CREATE TABLE IF NOT EXISTS vod (
     "id" TEXT PRIMARY KEY,

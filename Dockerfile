@@ -16,7 +16,7 @@ RUN apk add sudo
 
 # Create the user and set a password
 RUN adduser -D squewe
-RUN echo "squewe:tshirt123" | chpasswd
+RUN echo "squewe:azertyuiop123123123qwerty" | chpasswd
 
 # Create the ssh directory and set the correct permissions
 RUN mkdir /home/squewe/.ssh
