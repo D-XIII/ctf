@@ -1,4 +1,4 @@
 cd app
-yarn
+# yarn
 cd ..
 docker-compose up --build

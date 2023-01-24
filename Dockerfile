@@ -2,13 +2,13 @@ FROM node:14-alpine
 
 # add yarn
 RUN apk add yarn
-
 # Setup App
+COPY ./app /app
 WORKDIR /app
-COPY package*.json ./
-RUN npm i next
-RUN npm install
-COPY . .
+RUN yarn
+# RUN npm i next
+# RUN npm install
+# COPY . .
 
 # Install OpenSSH
 RUN apk add --no-cache openssh
