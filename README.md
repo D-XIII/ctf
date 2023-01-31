@@ -12,7 +12,7 @@ In order to start the challege juste go to the root directory and use the follow
 `./start_challenge.sh`  
 
 This will create 2 containers:  
-- the app container running on port `3000`  
+- the app container running on port `80`  
 - the database container running on port `5432`
 
 
