@@ -1,10 +1,9 @@
-# CTF - DX-III  
+# CTF - D-XIII  
 
-Challenge created for the Pole Sup Delasalle by D-XIII  
+Challenge created for Pole Sup Delasalle by D-XIII  
 
 ## Prerequisites
 You will need those tools installed on the host machine:  
-- nodesjs + yarn
 - docker + docker-compose
 
 ## Start the challenge  
